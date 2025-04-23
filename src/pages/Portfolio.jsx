@@ -1,18 +1,19 @@
 "use client"
-
-import { useState } from "react"
-import { Github, Linkedin,ExternalLink } from "lucide-react"
+import emailjs from 'emailjs-com';
+import { useState, useRef } from "react"
+import { Github, Linkedin, ExternalLink } from "lucide-react"
 import styled from 'styled-components';
 import { SiLeetcode } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
 
 // Define project data with categories
+// Categories have -> full stack sites, front-end sites, ui design, mobile application.
 const projectsData = [
   {
     id: 1,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
-    category: "web developement", // Change to "web template" for consistency from ui design
-    alt: "web Developement project", //UI Design Project -> web development project
+    category: "full stack sites", 
+    alt: "web Developement project", 
     title: "Mern Stack",
     description: "Full stack application with MongoDB, Express, React , Node.js ,Tailwind CSS and Firebase",
     demoUrl: "https://merit-institution.onrender.com/",
@@ -41,7 +42,7 @@ const projectsData = [
   {
     id: 4,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "branding",
+    category: "mobile application",
     alt: "Branding Project",
     title: "Corporate Branding",
     description: "Complete branding package for modern businesses",
@@ -71,7 +72,7 @@ const projectsData = [
   {
     id: 7,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "logo",
+    category: "mobile application",
     alt: "Logo Project",
     title: "Minimalist Logo",
     description: "Clean and modern logo design for startups",
@@ -88,7 +89,7 @@ const projectsData = [
     demoUrl: "https://example.com/demo8",
     githubUrl: "https://github.com/yourusername/restaurant-branding"
   },
-]
+];
 
 // Keep the existing StyledButton for GitHub
 const StyledButton = styled.button`
@@ -120,7 +121,7 @@ const StyledButton = styled.button`
 `;
 
 // Design imported from UI-VERSE site for pre-build components
-const GithubButton =  styled.a`
+const GithubButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,14 +248,33 @@ const StyledCard = styled.div`
 
 // Self-contained portfolio component
 function Portfolio() {
-  // State to track the selected category
-  const [activeCategory, setActiveCategory] = useState("all category")
+  const form = useRef();
+  const [activeCategory, setActiveCategory] = useState("all category");
 
   // Filter projects based on selected category
   const filteredProjects =
     activeCategory === "all category"
       ? projectsData
-      : projectsData.filter((project) => project.category === activeCategory.toLowerCase())
+      : projectsData.filter((project) => project.category === activeCategory);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_mhvz79k',      // replace this
+      'template_ovbt6dm',     // replace this
+      form.current,
+      '2LlmztOwYg-Rxuogq'       // replace this
+    ).then(
+      (result) => {
+        alert('Message sent successfully!');
+        e.target.reset(); // clear form after submit
+      },
+      (error) => {
+        alert('Failed to send message. Please try again.');
+      }
+    );
+  };
 
   return (
     <div className="bg-[#d9d9d9] text-[#0a0a0a]">
@@ -270,10 +290,10 @@ function Portfolio() {
               KRISHNAN.
             </h1>
             <p className="text-[#767676] mt-4 mb-6">
-              A highly creative and purpose-driven digital marketing specialist with over 10 years of experience.
+            I am a web developer who enjoys making websites that look good and work well. I use the latest tools to build sites that are easy to use on any device. I also use AI to make websites faster and smarter than others.
             </p>
             <div className="flex items-center space-x-4">
-              <button  className="bg-[#d3e97a] px-6 py-3 rounded-full font-medium"> <a href="#contact">CONTACT ME </a></button>
+              <button className="bg-[#d3e97a] px-6 py-3 rounded-full font-medium"> <a href="#contact">CONTACT ME </a></button>
               <span className="w-1 h-1 bg-[#0a0a0a] rounded-full"></span>
               <a href="https://www.linkedin.com/in/gokul-akrishnan-b26ba725a/" aria-label="LinkedIn Profile" className="bg-[#0a0a0a] p-2 rounded-full">
                 <Linkedin className="w-5 h-5 text-white" />
@@ -304,16 +324,15 @@ function Portfolio() {
           </div>
           <div>
             <p className="text-[#484848] mb-6">
-              I am always looking to add more skills. Morbi egestas neque eu blandit fermentum. Nulla ac laoreet ligula.
-              Pellentesque ac ex at purus faucibus tristique ut et dolor.
+            I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
             </p>
             <div className="flex flex-wrap gap-3">
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">HTML</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">CSS</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">JAVASCRIPT</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">REACT</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">NODE.JS</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">FIGMA</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">MERN STACK</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Problem Solving</span>
             </div>
           </div>
         </div>
@@ -324,13 +343,12 @@ function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Projects</h2>
           <p className="text-center text-[#767676] max-w-2xl mx-auto mb-8">
-            Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint. Velit Officia Consequat Duis Enim
-            Velit Mollit. Lorem Ipsum
+          I have completed several projects, gaining valuable hands-on experience and improving my development skills through real-world practice.
           </p>
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category", "UI Design", "Front-End Sites", "Branding", "Web Developement"].map((category) => (
+            {["All Category", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application"].map((category) => (
               <button
                 key={category}
                 className={`font-medium transition-colors ${
@@ -363,7 +381,7 @@ function Portfolio() {
                       <ExternalLink />
                       <span className="text">Live Demo</span>
                     </LiveDemoButton>
-                    <GithubButton  onClick={() => window.open(project.githubUrl, "_blank")}>
+                    <GithubButton href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github />
                       <span className="text">GitHub</span>
                     </GithubButton>
@@ -385,13 +403,13 @@ function Portfolio() {
                 I'm open to freelance opportunities and collaborations. Feel free to reach out if you're looking for a developer who can bring your ideas to life.
               </p>
               <div className="flex space-x-4 mt-6">
-                <a href="#" aria-label="GitHub Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
+                <a href="https://github.com/Gokulakrishnan2005" aria-label="GitHub Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="#" aria-label="Leetcode Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
+                <a href="https://leetcode.com/u/gokula05/" aria-label="Leetcode Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
                   <SiLeetcode className="w-6 h-6"/>
                 </a>
-                <a href="#" aria-label="LinkedIn Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
+                <a href="https://www.linkedin.com/in/gokul-akrishnan-b26ba725a/" aria-label="LinkedIn Profile" className="text-[#0a0a0a] hover:text-[#767676] transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>                
                 <a 
@@ -406,7 +424,7 @@ function Portfolio() {
               </div>
             </div>
             <div>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form ref={form} className="space-y-4" onSubmit={sendEmail}>
                 <div>
                   <input 
                     type="text" 
@@ -463,7 +481,7 @@ function Portfolio() {
         </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;
