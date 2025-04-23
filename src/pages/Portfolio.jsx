@@ -20,13 +20,13 @@ const projectsData = [
   },
   {
     id: 2,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "web template",
+    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1745417611071Screenshot%202025-04-23%20194142.png?alt=media&token=c0b5a107-2cf2-4a47-bf8b-49d60225a3b7",
+    category: "front-end sites",
     alt: "Web Template Project",
-    title: "Tailering Application",
-    description: "Responsive web template for a tailoring business",
-    demoUrl: "https://example.com/demo2",
-    githubUrl: "https://github.com/yourusername/react-dashboard"
+    title: "My Portfolio",
+    description: "It is an interactive portfolio website showcasing my work and skills",
+    demoUrl: "https://my-portfolio-euhb.onrender.com",
+    githubUrl: "https://github.com/Gokulakrishnan2005/My-Portfolio"
   },
   {
     id: 3,
@@ -119,6 +119,7 @@ const StyledButton = styled.button`
   }
 `;
 
+// Design imported from UI-VERSE site for pre-build components
 const GithubButton =  styled.a`
   display: flex;
   align-items: center;
@@ -284,8 +285,9 @@ function Portfolio() {
           </div>
           <div>
             <div className="bg-[#f3f3f3] rounded-lg overflow-hidden m-10">
+              {/* My Image */}
               <img 
-                src="/api/placeholder/400/400" 
+                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66" 
                 alt="Gokula Krishnan profile" 
                 className="w-full h-full object-cover rounded-lg" 
               />
@@ -328,7 +330,7 @@ function Portfolio() {
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category", "UI Design", "Web Template", "Branding", "Web Developement"].map((category) => (
+            {["All Category", "UI Design", "Front-End Sites", "Branding", "Web Developement"].map((category) => (
               <button
                 key={category}
                 className={`font-medium transition-colors ${
