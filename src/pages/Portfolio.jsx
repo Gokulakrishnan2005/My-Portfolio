@@ -11,7 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const projectsData = [
   {
     id: 1,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
+    image: "https://photos.app.goo.gl/tvm7ASpGVbmdiMzM9",
     category: "full stack sites", 
     alt: "web Developement project", 
     title: "Mern Stack",
@@ -21,6 +21,16 @@ const projectsData = [
   },
   {
     id: 2,
+    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
+    category: "full stack sites", 
+    alt: "web Developement project", 
+    title: "Mern Stack",
+    description: "Full stack application with MongoDB, Express, React , Node.js ,Tailwind CSS and Firebase",
+    demoUrl: "https://merit-institution.onrender.com/",
+    githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
+  },
+  {
+    id: 3,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1745417611071Screenshot%202025-04-23%20194142.png?alt=media&token=c0b5a107-2cf2-4a47-bf8b-49d60225a3b7",
     category: "front-end sites",
     alt: "Web Template Project",
@@ -30,7 +40,7 @@ const projectsData = [
     githubUrl: "https://github.com/Gokulakrishnan2005/My-Portfolio"
   },
   {
-    id: 3,
+    id: 4,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "logo",
     alt: "Logo Project",
@@ -40,7 +50,7 @@ const projectsData = [
     githubUrl: "https://github.com/yourusername/brand-identity"
   },
   {
-    id: 4,
+    id: 5,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "mobile application",
     alt: "Branding Project",
@@ -50,7 +60,7 @@ const projectsData = [
     githubUrl: "https://github.com/yourusername/corporate-branding"
   },
   {
-    id: 5,
+    id: 6,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "ui design",
     alt: "UI Design Project",
@@ -60,7 +70,7 @@ const projectsData = [
     githubUrl: "https://github.com/yourusername/mobile-app-ui"
   },
   {
-    id: 6,
+    id: 7,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "web template",
     alt: "Web Template Project",
@@ -70,7 +80,7 @@ const projectsData = [
     githubUrl: "https://github.com/yourusername/ecommerce-template"
   },
   {
-    id: 7,
+    id: 8,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "mobile application",
     alt: "Logo Project",
@@ -80,7 +90,7 @@ const projectsData = [
     githubUrl: "https://github.com/yourusername/minimalist-logo"
   },
   {
-    id: 8,
+    id: 9,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
     category: "branding",
     alt: "Branding Project",
