@@ -41,12 +41,12 @@ const projectsData = [
   },
   {
     id: 4,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "logo",
-    alt: "Logo Project",
-    title: "Brand Identity",
-    description: "Creating unique brand identity through logo design",
-    demoUrl: "https://example.com/demo3",
+    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/Screenshot%202025-06-24%20074118.png?alt=media&token=b20f1d01-4782-48f7-adbb-2b475cde357e",
+    category: "full stack sites",
+    alt: "web development project",
+    title: "Printing Shop with E-commerce",
+    description: "Xerox2U is your all-in-one platform for essential digital services, combining on-demand printing with a full-featured e-commerce storefront. It’s designed to be a blueprint for a local business's entire digital operation, in one box.",
+    demoUrl: "https://studio-production-a7e6.up.railway.app/",
     githubUrl: "https://github.com/yourusername/brand-identity"
   },
   {
