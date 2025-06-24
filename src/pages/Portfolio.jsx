@@ -11,8 +11,8 @@ import { FaWhatsapp } from "react-icons/fa";
 const projectsData = [
   {
     id: 1,
-    image: "https://photos.app.goo.gl/tvm7ASpGVbmdiMzM9",
-    category: "full stack sites", 
+    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
+    category: "pc build", 
     alt: "web Developement project", 
     title: "Mern Stack",
     description: "Full stack application with MongoDB, Express, React , Node.js ,Tailwind CSS and Firebase",
@@ -337,6 +337,7 @@ function Portfolio() {
             I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
             </p>
             <div className="flex flex-wrap gap-3">
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">PC Builder</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">HTML</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">CSS</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">JAVASCRIPT</span>
@@ -358,7 +359,7 @@ function Portfolio() {
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application"].map((category) => (
+            {["All Category", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application", "Pc Build"].map((category) => (
               <button
                 key={category}
                 className={`font-medium transition-colors ${
