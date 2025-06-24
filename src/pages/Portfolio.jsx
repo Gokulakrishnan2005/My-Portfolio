@@ -14,10 +14,10 @@ const projectsData = [
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
     category: "pc build", 
     alt: "web Developement project", 
-    title: "Mern Stack",
-    description: "Full stack application with MongoDB, Express, React , Node.js ,Tailwind CSS and Firebase",
-    demoUrl: "https://merit-institution.onrender.com/",
-    githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
+    title: "Personal Pc Build",
+    description: "Specs : ryzen 5 5600, Crusial 512GB Gen 4 Nvme ssd, asus b450 Motherboard, 16gb xpg ram, 400w zebronics smps",
+    demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
+    githubUrl: "*/"
   },
   {
     id: 2,
@@ -359,7 +359,7 @@ function Portfolio() {
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application", "Pc Build"].map((category) => (
+            {["All Category","Pc Build", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application"].map((category) => (
               <button
                 key={category}
                 className={`font-medium transition-colors ${
