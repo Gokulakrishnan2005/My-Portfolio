@@ -36,7 +36,7 @@ const projectsData = [
     alt: "Web Template Project",
     title: "My Portfolio",
     description: "It is an interactive portfolio website showcasing my work and skills",
-    demoUrl: "https://my-portfolio-euhb.onrender.com",
+    demoUrl: "https://gokulakrishnan-portfolio.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/My-Portfolio"
   },
   {
