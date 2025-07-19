@@ -11,13 +11,13 @@ import { FaWhatsapp } from "react-icons/fa";
 const projectsData = [
   {
     id: 1,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
-    category: "pc build", 
-    alt: "web Developement project", 
-    title: "Personal Pc Build",
-    description: "Specs : ryzen 5 5600, Crusial 512GB Gen 4 Nvme ssd, asus b450 Motherboard, 16gb xpg ram, 400w zebronics smps",
-    demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
-    githubUrl: "*/"
+    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/Elm-Library-Hub.png?alt=media&token=5c149b2c-d48d-4f9f-80f9-318afd60b9be",
+    category: "front-end sites",
+    alt: "Front-End Project",
+    title: "Elm Library Hub for Library Management",
+    description: "Application for managing library operations, including book management, user management, and borrowing system.",
+    demoUrl: "https://library-chapter-chashers.onrender.com/",
+    githubUrl: "https://github.com/Gokulakrishnan2005/Library_chapter_chashers"
   },
   {
     id: 2,
@@ -51,13 +51,13 @@ const projectsData = [
   },
   {
     id: 5,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "mobile application",
-    alt: "Branding Project",
-    title: "Corporate Branding",
-    description: "Complete branding package for modern businesses",
-    demoUrl: "https://example.com/demo4",
-    githubUrl: "https://github.com/yourusername/corporate-branding"
+    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
+    category: "pc build", 
+    alt: "web Developement project", 
+    title: "Personal Pc Build",
+    description: "Specs : ryzen 5 5600, Crusial 512GB Gen 4 Nvme ssd, asus b450 Motherboard, 16gb xpg ram, 400w zebronics smps",
+    demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
+    githubUrl: "*/"
   },
   {
     id: 6,
@@ -359,7 +359,7 @@ function Portfolio() {
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category","Pc Build", "UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application"].map((category) => (
+            {["All Category","UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application", "Pc Build"].map((category) => (
               <button
                 key={category}
                 className={`font-medium transition-colors ${
