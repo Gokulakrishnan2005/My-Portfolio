@@ -46,7 +46,7 @@ const projectsData = [
     alt: "web development project",
     title: "Printing Shop with E-commerce",
     description: "Xerox2U is your all-in-one platform for essential digital services, combining on-demand printing with a full-featured e-commerce storefront. It’s designed to be a blueprint for a local business's entire digital operation, in one box.",
-    demoUrl: "https://studio-production-a7e6.up.railway.app/",
+    demoUrl: "https://xerox2u.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/studio"
   },
   {
