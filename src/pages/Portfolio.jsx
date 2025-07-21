@@ -59,46 +59,46 @@ const projectsData = [
     demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
     githubUrl: "*/"
   },
-  {
-    id: 6,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "ui design",
-    alt: "UI Design Project",
-    title: "Mobile App UI",
-    description: "User interface design for iOS and Android applications",
-    demoUrl: "https://example.com/demo5",
-    githubUrl: "https://github.com/yourusername/mobile-app-ui"
-  },
-  {
-    id: 7,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "web template",
-    alt: "Web Template Project",
-    title: "E-commerce Template",
-    description: "Complete online store solution with payment integration",
-    demoUrl: "https://example.com/demo6",
-    githubUrl: "https://github.com/yourusername/ecommerce-template"
-  },
-  {
-    id: 8,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "mobile application",
-    alt: "Logo Project",
-    title: "Minimalist Logo",
-    description: "Clean and modern logo design for startups",
-    demoUrl: "https://example.com/demo7",
-    githubUrl: "https://github.com/yourusername/minimalist-logo"
-  },
-  {
-    id: 9,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
-    category: "branding",
-    alt: "Branding Project",
-    title: "Restaurant Branding",
-    description: "Full branding package for restaurants and cafes",
-    demoUrl: "https://example.com/demo8",
-    githubUrl: "https://github.com/yourusername/restaurant-branding"
-  },
+  // {
+  //   id: 6,
+  //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
+  //   category: "ui design",
+  //   alt: "UI Design Project",
+  //   title: "Mobile App UI",
+  //   description: "User interface design for iOS and Android applications",
+  //   demoUrl: "https://example.com/demo5",
+  //   githubUrl: "https://github.com/yourusername/mobile-app-ui"
+  // },
+  // {
+  //   id: 7,
+  //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
+  //   category: "web template",
+  //   alt: "Web Template Project",
+  //   title: "E-commerce Template",
+  //   description: "Complete online store solution with payment integration",
+  //   demoUrl: "https://example.com/demo6",
+  //   githubUrl: "https://github.com/yourusername/ecommerce-template"
+  // },
+  // {
+  //   id: 8,
+  //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
+  //   category: "mobile application",
+  //   alt: "Logo Project",
+  //   title: "Minimalist Logo",
+  //   description: "Clean and modern logo design for startups",
+  //   demoUrl: "https://example.com/demo7",
+  //   githubUrl: "https://github.com/yourusername/minimalist-logo"
+  // },
+  // {
+  //   id: 9,
+  //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
+  //   category: "branding",
+  //   alt: "Branding Project",
+  //   title: "Restaurant Branding",
+  //   description: "Full branding package for restaurants and cafes",
+  //   demoUrl: "https://example.com/demo8",
+  //   githubUrl: "https://github.com/yourusername/restaurant-branding"
+  // },
 ];
 
 // Keep the existing StyledButton for GitHub
