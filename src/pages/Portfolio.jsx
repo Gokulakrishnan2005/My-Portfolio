@@ -49,16 +49,16 @@ const projectsData = [
     demoUrl: "https://xerox2u.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/studio"
   },
-  {
-    id: 5,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
-    category: "pc build", 
-    alt: "web Developement project", 
-    title: "Personal Pc Build",
-    description: "Specs : ryzen 5 5600, Crusial 512GB Gen 4 Nvme ssd, asus b450 Motherboard, 16gb xpg ram, 400w zebronics smps",
-    demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
-    githubUrl: "*/"
-  },
+  // {
+  //   id: 5,
+  //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/IMG_20241017_205348-EDIT.jpg?alt=media&token=9a12e2f1-61e8-4abf-a2ee-1a873728d3d5",
+  //   category: "pc build", 
+  //   alt: "web Developement project", 
+  //   title: "Personal Pc Build",
+  //   description: "Specs : ryzen 5 5600, Crusial 512GB Gen 4 Nvme ssd, asus b450 Motherboard, 16gb xpg ram, 400w zebronics smps",
+  //   demoUrl: "https://www.youtube.com/watch?v=1AqZKoqkJ9M",
+  //   githubUrl: "*/"
+  // },
   // {
   //   id: 6,
   //   image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/17449041487882a7c9a6a-881c-479c-9139-610957078581.jpg?alt=media&token=4a1d43a5-1f8f-42e6-8846-b3a98e3f5739",
