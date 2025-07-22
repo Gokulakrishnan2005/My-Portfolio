@@ -341,7 +341,7 @@ function Portfolio() {
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Full-Stack Web Applications</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Interactive User Interfaces</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Reliable Server-Side APIs</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">FIGMA</span>
+{/*               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">FIGMA</span> */}
 {/*               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">MERN STACK</span> */}
 {/*               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Problem Solving</span> */}
             </div>
