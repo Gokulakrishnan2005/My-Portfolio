@@ -25,7 +25,7 @@ const projectsData = [
     category: "full stack sites", 
     alt: "web Developement project", 
     title: "Merit Institution Management System",
-    description: " This project is a comprehensive student management system for Merit Institution. It facilitates student registration, document management, and performance tracking, providing a streamlined digital platform for administrative tasks. "
+    description: " This project is a comprehensive student management system for Merit Institution. It facilitates student registration, document management, and performance tracking, providing a streamlined digital platform for administrative tasks. ",
     demoUrl: "https://merit-institution.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
   },
