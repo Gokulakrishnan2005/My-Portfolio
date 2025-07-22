@@ -24,8 +24,8 @@ const projectsData = [
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
     category: "full stack sites", 
     alt: "web Developement project", 
-    title: "Mern Stack",
-    description: "Full stack application with MongoDB, Express, React , Node.js ,Tailwind CSS and Firebase",
+    title: "Merit Institution Management System",
+    description: " This project is a comprehensive student management system for Merit Institution. It facilitates student registration, document management, and performance tracking, providing a streamlined digital platform for administrative tasks. "
     demoUrl: "https://merit-institution.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
   },
