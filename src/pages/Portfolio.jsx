@@ -158,7 +158,7 @@ const GithubButton = styled.a`
   }
   
   .text {
-    font-size: 14px;
+    font-size: 14px; 
     font-weight: 500;
     margin: 0;
   }
@@ -359,7 +359,7 @@ function Portfolio() {
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All Category","UI Design", "Front-End Sites", "Full Stack Sites", "Mobile Application", "Pc Build"].map((category) => (
+            {["All Category","UI Design", "Front-End Sites", "Full Stack Sites"].map((category) => ( // add in future -  "Pc Build" , "Mobile Application",
               <button
                 key={category}
                 className={`font-medium transition-colors ${
