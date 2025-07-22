@@ -330,20 +330,20 @@ function Portfolio() {
       <section className="px-6 py-12 bg-[#e6e6e6]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-4xl font-bold">MY CAPABILITIES</h2>
+            <h2 className="text-4xl font-bold">What I Build</h2>
           </div>
           <div>
             <p className="text-[#484848] mb-6">
             I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">PC Builder</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">HTML</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">CSS</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">JAVASCRIPT</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">FIGMA</span>
               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">MERN STACK</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Problem Solving</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Full-Stack Web Applications</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Interactive User Interfaces</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Reliable Server-Side APIs</span>
+              <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">FIGMA</span>
+{/*               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">MERN STACK</span> */}
+{/*               <span className="px-6 py-3 bg-white rounded-full border border-[#c7c7c7]">Problem Solving</span> */}
             </div>
           </div>
         </div>
