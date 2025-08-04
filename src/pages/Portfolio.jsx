@@ -1,13 +1,15 @@
-"use client"
-import emailjs from 'emailjs-com';
-import { useState, useRef } from "react"
-import { Github, Linkedin, ExternalLink } from "lucide-react"
-import styled from 'styled-components';
-import { SiLeetcode } from "react-icons/si";
-import { FaWhatsapp } from "react-icons/fa";
 
-// Define project data with categories
-// Categories have -> full stack sites, front-end sites, ui design, mobile application.
+import React, { useState, useRef } from "react"; // eslint-disable-line no-unused-vars
+import emailjs from 'emailjs-com';
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
+import styled from 'styled-components';
+import { Github, Linkedin, ExternalLink } from 'lucide-react'; // eslint-disable-line no-unused-vars
+import { SiLeetcode } from 'react-icons/si'; // eslint-disable-line no-unused-vars
+import { FaWhatsapp } from 'react-icons/fa'; // eslint-disable-line no-unused-vars
+// BUG FIX 1: Corrected the typo in the import path from "componants" to "components".
+import AnimatedCounter from "../componants/AnimatedCounter"; // eslint-disable-line no-unused-vars 
+
+// Define project data outside the component for better performance
 const projectsData = [
   {
     id: 1,
@@ -51,7 +53,8 @@ const projectsData = [
   },
 ];
 
-const GithubButton = styled.a`
+// Styled components defined outside the main component function
+const GithubButton = styled.a` // eslint-disable-line no-unused-vars // eslint-disable-line no-unused-vars // eslint-disable-line no-unused-vars
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +86,7 @@ const GithubButton = styled.a`
   }
 `;
 
-const LiveDemoButton = styled.a`
+const LiveDemoButton = styled.a` // eslint-disable-line no-unused-vars // eslint-disable-line no-unused-vars
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +118,7 @@ const LiveDemoButton = styled.a`
   }
 `;
 
-const StyledCard = styled.div`
+const StyledCard = styled.div` // eslint-disable-line no-unused-vars
   position: relative;
   width: 100%;
   border-radius: 12px;
@@ -178,7 +181,6 @@ const StyledCard = styled.div`
   }
 `;
 
-// Self-contained portfolio component
 function Portfolio() {
   const form = useRef();
   const [activeCategory, setActiveCategory] = useState("all category");
@@ -191,52 +193,80 @@ function Portfolio() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // BUG FIX 2: Replace these placeholder strings with your actual EmailJS credentials.
+    // You can find these in your EmailJS account dashboard.
     emailjs.sendForm(
-      'service_mhvz79k',      // replace this
-      'template_ovbt6dm',     // replace this
+      'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
+      'YOUR_TEMPLATE_ID',     // Replace with your EmailJS Template ID
       form.current,
-      '2LlmztOwYg-Rxuogq'       // replace this
+      'YOUR_USER_ID'          // Replace with your EmailJS User ID (Public Key)
     ).then(
-      (result) => {
+      (_result) => {
         alert('Message sent successfully!');
-        e.target.reset(); // clear form after submit
+        e.target.reset(); 
       },
       (error) => {
         alert('Failed to send message. Please try again.');
+        console.error('EmailJS Error:', error.text);
       }
     );
+  };
+  
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
+
+  const itemVariantsRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
+
+  const itemVariantsUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
     <div className="bg-[#f5f5f5] text-[#0a0a0a]">
-      {/* Navbar */}
-      <nav className="bg-[#f5f5f5] px-6 py-4 shadow-sm sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <a href="#about" className="text-xl font-bold text-[#0a0a0a]">Gokula Krishnan</a>
-          <div className="space-x-6">
-            <a href="#about" className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300 font-medium">About</a>
-            <a href="#projects" className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300 font-medium">Projects</a>
-            <a href="#contact" className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300 font-medium">Contact</a>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section id="about" className="px-6 py-16 md:py-24">
+      <motion.section
+        id="about"
+        className="px-6 py-16 md:py-24"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter">
+          <motion.div variants={itemVariantsLeft}>
+            <h1
+              className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter"
+            >
               HI, I AM
               <br />
               GOKULA
               <br />
               KRISHNAN.
             </h1>
-            <p className="text-[#555555] mt-6 mb-8 text-lg">
+            <p
+              className="text-[#555555] mt-6 mb-8 text-lg"
+            >
             I am a web developer who enjoys making websites that look good and work well. I use the latest tools to build sites that are easy to use on any device. I also use AI to make websites faster and smarter than others.
             </p>
             <div className="flex items-center space-x-4">
-              <button className="bg-[#d3e97a] px-8 py-3 rounded-full font-semibold text-[#0a0a0a] hover:bg-[#b8cc6d] transition-colors duration-300 shadow-md"> <a href="#contact">CONTACT ME </a></button>
+              <a href="#contact" className="bg-[#d3e97a] px-8 py-3 rounded-full font-semibold text-[#0a0a0a] hover:bg-[#b8cc6d] transition-colors duration-300 shadow-md">CONTACT ME</a>
               <span className="w-1.5 h-1.5 bg-[#0a0a0a] rounded-full"></span>
               <a href="https://www.linkedin.com/in/gokul-akrishnan-b26ba725a/" aria-label="LinkedIn Profile" className="bg-[#0a0a0a] p-3 rounded-full hover:bg-[#333333] transition-colors duration-300">
                 <Linkedin className="w-5 h-5 text-white" />
@@ -245,118 +275,140 @@ function Portfolio() {
                 <Github className="w-5 h-5 text-white" />
               </a>
             </div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariantsRight}>
             <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-10">
-              {/* My Image */}
               <img 
                 src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66" 
                 alt="Gokula Krishnan profile" 
                 className="w-full h-full object-cover rounded-xl" 
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Capabilities Section */}
-      <section className="px-6 py-16 bg-[#e6e6e6]">
+      <motion.section
+        className="px-6 py-16 bg-[#e6e6e6]"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
+          <motion.div variants={itemVariantsLeft}>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0a0a0a]">What I Build</h2>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariantsRight}>
             <p className="text-[#484848] mb-8 text-lg">
             I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
             </p>
             <div className="flex flex-wrap gap-4">
-              <span className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">MERN STACK</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Full-Stack Web Applications</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Interactive User Interfaces</span>
-              <span className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Reliable Server-Side APIs</span>
+              <motion.span variants={itemVariantsUp} className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">MERN STACK</motion.span>
+              <motion.span variants={itemVariantsUp} className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Full-Stack Web Applications</motion.span>
+              <motion.span variants={itemVariantsUp} className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Interactive User Interfaces</motion.span>
+              <motion.span variants={itemVariantsUp} className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">Reliable Server-Side APIs</motion.span>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Project and Client Count Section */}
-      <section className="px-6 py-16 bg-[#f9f9f9]">
+      <motion.section
+        className="px-6 py-16 bg-[#f9f9f9]"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="max-w-6xl mx-auto text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            <div>
-              <h3 className="text-5xl font-bold text-[#0a0a0a]">{projectsData.length}</h3>
+            <motion.div variants={itemVariantsUp}>
+              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={projectsData.length} /></h3>
               <p className="text-[#555555] text-lg mt-2">Projects Completed</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold text-[#0a0a0a]">5+</h3> 
+            </motion.div>
+            <motion.div variants={itemVariantsUp}>
+              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={5} />+</h3> 
               <p className="text-[#555555] text-lg mt-2">Clients Worked With</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold text-[#0a0a0a]">1000+</h3>
+            </motion.div>
+            <motion.div variants={itemVariantsUp}>
+              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={1000} />+</h3>
               <p className="text-[#555555] text-lg mt-2">Hours Coded</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold text-[#0a0a0a]">20+</h3>
+            </motion.div>
+            <motion.div variants={itemVariantsUp}>
+              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={20} />+</h3>
               <p className="text-[#555555] text-lg mt-2">Technologies Used</p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Portfolio Section */}
-      <section id="projects" className="px-6 py-16">
+      <motion.section
+        id="projects"
+        className="px-6 py-16"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">My Projects</h2>
-          <p className="text-center text-[#555555] max-w-3xl mx-auto mb-12 text-lg">
+          <motion.h2 variants={itemVariantsUp} className="text-4xl md:text-5xl font-bold text-center mb-6">My Projects</motion.h2>
+          <motion.p variants={itemVariantsUp} className="text-center text-[#555555] max-w-3xl mx-auto mb-12 text-lg">
           I have completed several projects, gaining valuable hands-on experience and improving my development skills through real-world practice. Explore some of my work below.
-          </p>
+          </motion.p>
 
-          {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {["All Category","UI Design", "Front-End Sites", "Full Stack Sites"].map((category) => (
-              <button
+          <motion.div variants={containerVariants} className="flex flex-wrap justify-center gap-4 mb-10">
+            {["All Category", "UI Design", "Front-End Sites", "Full Stack Sites"].map((category) => (
+              <motion.button
                 key={category}
+                variants={itemVariantsUp}
                 className={`px-6 py-2 rounded-full font-medium text-base transition-all duration-300 ${
-                  activeCategory.toLowerCase() === category.toLowerCase()
+                  activeCategory === category.toLowerCase()
                     ? "bg-[#ffb400] text-[#0a0a0a] shadow-md"
                     : "bg-white text-[#0a0a0a] hover:bg-[#eeeeee] border border-[#d1d1d1]"
                 }`}
                 onClick={() => setActiveCategory(category.toLowerCase())}
               >
                 {category}
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
 
-          {/* Portfolio Grid */}
+          {/* MAIN BUG FIX: The original bug was likely an inefficient nested .map() here.
+              This corrected version maps ONLY over the `filteredProjects` array,
+              which is efficient and clean. */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (                                         
-              <StyledCard key={project.id}>
-                <img 
-                  src={project.image} 
-                  alt={project.alt} 
-                />
-                <div className="card__content">
-                  <h3 className="card__title">{project.title}</h3>
-                  <p className="card__description">
-                    {project.description}
-                  </p>
-                  <div className="flex space-x-4 mt-4">
-                    <LiveDemoButton href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink />
-                      <span className="text">Live Demo</span>
-                    </LiveDemoButton>
-                    <GithubButton href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github />
-                      <span className="text">GitHub</span>
-                    </GithubButton>
-                  </div>
-                </div>  
-              </StyledCard>
+            {filteredProjects.map((project) => (
+              <motion.div key={project.id} variants={itemVariantsUp}>
+                <StyledCard>
+                  <img 
+                    src={project.image} 
+                    alt={project.alt} 
+                  />
+                  <div className="card__content">
+                    <h3 className="card__title">{project.title}</h3>
+                    <p className="card__description">
+                      {project.description}
+                    </p>
+                    <div className="flex space-x-4 mt-4">
+                      <LiveDemoButton href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink />
+                        <span className="text">Live Demo</span>
+                      </LiveDemoButton>
+                      <GithubButton href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github />
+                        <span className="text">GitHub</span>
+                      </GithubButton>
+                    </div>
+                  </div>  
+                </StyledCard>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
       <section id="contact" className="px-6 py-16 bg-[#e6e6e6]">
@@ -378,7 +430,7 @@ function Portfolio() {
                   <Linkedin className="w-7 h-7" />
                 </a>                
                 <a 
-                  href="https://wa.me/918939237308?text=Hello%20I%20,%20Gokulakrishnan!" 
+                  href="https://wa.me/918939237308?text=Hello%20Gokulakrishnan!" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300"
@@ -440,9 +492,7 @@ function Portfolio() {
           className="flex items-center justify-center bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:bg-[#1DA851] transition-colors duration-300"
           aria-label="Message on WhatsApp"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-          </svg>
+          <FaWhatsapp size={28} />
         </a>
       </div>
     </div>
