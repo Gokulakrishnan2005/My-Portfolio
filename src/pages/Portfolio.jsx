@@ -223,9 +223,16 @@ function Portfolio() {
     },
   };
 
-  const itemVariantsLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const itemVariantsText = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  const itemVariantsActualImage = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   const itemVariantsRight = {
@@ -250,7 +257,31 @@ function Portfolio() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <motion.div variants={itemVariantsLeft}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={itemVariantsActualImage}
+          >
+            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-4 md:m-10 relative" style={{ width: '100%', paddingTop: '100%' }}> {/* Added relative and padding for aspect ratio */} 
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-300 animate-pulse rounded-xl">
+                  {/* You can add a loading spinner here if desired */}
+                </div>
+              )}
+              <img 
+                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66" 
+                alt="Gokula Krishnan profile" 
+                className={`absolute inset-0 w-full h-full object-cover rounded-xl ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} // Fade in image
+                onLoad={() => setImageLoaded(true)} 
+                style={{ transition: 'opacity 0.5s ease-in-out' }}
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={itemVariantsText}
+          >
             <h1
               className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter"
             >
@@ -276,15 +307,6 @@ function Portfolio() {
               </a>
             </div>
           </motion.div>
-          <motion.div variants={itemVariantsRight}>
-            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-10">
-              <img 
-                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66" 
-                alt="Gokula Krishnan profile" 
-                className="w-full h-full object-cover rounded-xl" 
-              />
-            </div>
-          </motion.div>
         </div>
       </motion.section>
 
@@ -297,7 +319,7 @@ function Portfolio() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          <motion.div variants={itemVariantsLeft}>
+          <motion.div variants={itemVariantsText}>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0a0a0a]">What I Build</h2>
           </motion.div>
           <motion.div variants={itemVariantsRight}>
