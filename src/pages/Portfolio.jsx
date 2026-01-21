@@ -51,6 +51,16 @@ const projectsData = [
     demoUrl: "https://xerox2u.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/studio"
   },
+  {
+    id: 5,
+    image: "https://ibb.co/qMkCsHT9",
+    category: "front-end sites",
+    alt: "Front-End Project",
+    title: "Casa design Interior site",
+    description: "Application for outreaching the client asked for showcase purpose, including separate section like profile, gallary, and about us.",
+    demoUrl: "https://the-furniture-company.onrender.com/",
+    githubUrl: "https://github.com/Gokulakrishnan2005/the-furniture-company"
+  },
 ];
 
 // Styled components defined outside the main component function
