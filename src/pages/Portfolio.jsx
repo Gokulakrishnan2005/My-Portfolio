@@ -53,7 +53,7 @@ const projectsData = [
   },
   {
     id: 5,
-    image: "https://ibb.co/qMkCsHT9",
+    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/brave_screenshot_the-furniture-company.onrender.com.png?alt=media&token=386f9f82-26c6-46e8-82e9-17147af2cd4f",
     category: "front-end sites",
     alt: "Front-End Project",
     title: "Casa design Interior site",
