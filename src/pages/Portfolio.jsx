@@ -24,8 +24,8 @@ const projectsData = [
   {
     id: 2,
     image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
-    category: "full stack sites", 
-    alt: "web Developement project", 
+    category: "full stack sites",
+    alt: "web Developement project",
     title: "Merit Institution Management System",
     description: " This project is a comprehensive student management system for Merit Institution. It facilitates student registration, document management, and performance tracking, providing a streamlined digital platform for administrative tasks. ",
     demoUrl: "https://merit-institution.onrender.com/",
@@ -58,7 +58,7 @@ const projectsData = [
     alt: "Front-End Project",
     title: "Casa design Interior site",
     description: "Application for outreaching the client asked for showcase purpose, including separate section like profile, gallary, and about us.",
-    demoUrl: "https://the-furniture-company.onrender.com/",
+    demoUrl: "https://the-furniture-company-pages.onrender.com",
     githubUrl: "https://github.com/Gokulakrishnan2005/the-furniture-company"
   },
 ];
@@ -213,7 +213,7 @@ function Portfolio() {
     ).then(
       (_result) => {
         alert('Message sent successfully!');
-        e.target.reset(); 
+        e.target.reset();
       },
       (error) => {
         alert('Failed to send message. Please try again.');
@@ -221,7 +221,7 @@ function Portfolio() {
       }
     );
   };
-  
+
   // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -272,17 +272,17 @@ function Portfolio() {
             animate="visible"
             variants={itemVariantsActualImage}
           >
-            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-4 md:m-10 relative" style={{ width: '100%', paddingTop: '100%' }}> {/* Added relative and padding for aspect ratio */} 
+            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-4 md:m-10 relative" style={{ width: '100%', paddingTop: '100%' }}> {/* Added relative and padding for aspect ratio */}
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-300 animate-pulse rounded-xl">
                   {/* You can add a loading spinner here if desired */}
                 </div>
               )}
-              <img 
-                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66" 
-                alt="Gokula Krishnan profile" 
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66"
+                alt="Gokula Krishnan profile"
                 className={`absolute inset-0 w-full h-full object-cover rounded-xl ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} // Fade in image
-                onLoad={() => setImageLoaded(true)} 
+                onLoad={() => setImageLoaded(true)}
                 style={{ transition: 'opacity 0.5s ease-in-out' }}
               />
             </div>
@@ -304,7 +304,7 @@ function Portfolio() {
             <p
               className="text-[#555555] mt-6 mb-8 text-lg"
             >
-            I am a web developer who enjoys making websites that look good and work well. I use the latest tools to build sites that are easy to use on any device. I also use AI to make websites faster and smarter than others.
+              I am a web developer who enjoys making websites that look good and work well. I use the latest tools to build sites that are easy to use on any device. I also use AI to make websites faster and smarter than others.
             </p>
             <div className="flex items-center space-x-4">
               <a href="#contact" className="bg-[#d3e97a] px-8 py-3 rounded-full font-semibold text-[#0a0a0a] hover:bg-[#b8cc6d] transition-colors duration-300 shadow-md">CONTACT ME</a>
@@ -334,7 +334,7 @@ function Portfolio() {
           </motion.div>
           <motion.div variants={itemVariantsRight}>
             <p className="text-[#484848] mb-8 text-lg">
-            I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
+              I am proficient in HTML, CSS, JavaScript, the MERN stack, React Native, and enjoy solving complex problems through code.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.span variants={itemVariantsUp} className="px-6 py-3 bg-white rounded-full border border-[#d1d1d1] text-[#0a0a0a] text-sm font-medium shadow-sm">MERN STACK</motion.span>
@@ -361,7 +361,7 @@ function Portfolio() {
               <p className="text-[#555555] text-lg mt-2">Projects Completed</p>
             </motion.div>
             <motion.div variants={itemVariantsUp}>
-              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={5} />+</h3> 
+              <h3 className="text-5xl font-bold text-[#0a0a0a]"><AnimatedCounter from={0} to={5} />+</h3>
               <p className="text-[#555555] text-lg mt-2">Clients Worked With</p>
             </motion.div>
             <motion.div variants={itemVariantsUp}>
@@ -388,7 +388,7 @@ function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <motion.h2 variants={itemVariantsUp} className="text-4xl md:text-5xl font-bold text-center mb-6">My Projects</motion.h2>
           <motion.p variants={itemVariantsUp} className="text-center text-[#555555] max-w-3xl mx-auto mb-12 text-lg">
-          I have completed several projects, gaining valuable hands-on experience and improving my development skills through real-world practice. Explore some of my work below.
+            I have completed several projects, gaining valuable hands-on experience and improving my development skills through real-world practice. Explore some of my work below.
           </motion.p>
 
           <motion.div variants={containerVariants} className="flex flex-wrap justify-center gap-4 mb-10">
@@ -396,11 +396,10 @@ function Portfolio() {
               <motion.button
                 key={category}
                 variants={itemVariantsUp}
-                className={`px-6 py-2 rounded-full font-medium text-base transition-all duration-300 ${
-                  activeCategory === category.toLowerCase()
+                className={`px-6 py-2 rounded-full font-medium text-base transition-all duration-300 ${activeCategory === category.toLowerCase()
                     ? "bg-[#ffb400] text-[#0a0a0a] shadow-md"
                     : "bg-white text-[#0a0a0a] hover:bg-[#eeeeee] border border-[#d1d1d1]"
-                }`}
+                  }`}
                 onClick={() => setActiveCategory(category.toLowerCase())}
               >
                 {category}
@@ -415,9 +414,9 @@ function Portfolio() {
             {filteredProjects.map((project) => (
               <motion.div key={project.id} variants={itemVariantsUp}>
                 <StyledCard>
-                  <img 
-                    src={project.image} 
-                    alt={project.alt} 
+                  <img
+                    src={project.image}
+                    alt={project.alt}
                   />
                   <div className="card__content">
                     <h3 className="card__title">{project.title}</h3>
@@ -434,7 +433,7 @@ function Portfolio() {
                         <span className="text">GitHub</span>
                       </GithubButton>
                     </div>
-                  </div>  
+                  </div>
                 </StyledCard>
               </motion.div>
             ))}
@@ -456,39 +455,39 @@ function Portfolio() {
                   <Github className="w-7 h-7" />
                 </a>
                 <a href="https://leetcode.com/u/gokula05/" aria-label="Leetcode Profile" className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300">
-                  <SiLeetcode className="w-7 h-7"/>
+                  <SiLeetcode className="w-7 h-7" />
                 </a>
                 <a href="https://www.linkedin.com/in/gokul-akrishnan-b26ba725a/" aria-label="LinkedIn Profile" className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300">
                   <Linkedin className="w-7 h-7" />
-                </a>                
-                <a 
-                  href="https://wa.me/918939237308?text=Hello%20Gokulakrishnan!" 
-                  target="_blank" 
+                </a>
+                <a
+                  href="https://wa.me/918939237308?text=Hello%20Gokulakrishnan!"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#0a0a0a] hover:text-[#ffb400] transition-colors duration-300"
                   aria-label="Message on WhatsApp"
                 >
-                  <FaWhatsapp className="w-7 h-7" />               
+                  <FaWhatsapp className="w-7 h-7" />
                 </a>
               </div>
             </div>
             <div>
               <form ref={form} className="space-y-6" onSubmit={sendEmail}>
                 <div>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="name"
-                    placeholder="Name" 
-                    className="w-full p-4 bg-white border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d3e97a] transition-all duration-200" 
+                    placeholder="Name"
+                    className="w-full p-4 bg-white border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d3e97a] transition-all duration-200"
                     required
                   />
                 </div>
                 <div>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
-                    placeholder="Email" 
-                    className="w-full p-4 bg-white border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d3e97a] transition-all duration-200" 
+                    placeholder="Email"
+                    className="w-full p-4 bg-white border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d3e97a] transition-all duration-200"
                     required
                   />
                 </div>
@@ -502,8 +501,8 @@ function Portfolio() {
                   ></textarea>
                 </div>
                 <div className="text-right">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="bg-[#0a0a0a] text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#333333] transition-colors duration-300 shadow-lg"
                   >
                     Send Message
@@ -517,9 +516,9 @@ function Portfolio() {
 
       {/* WhatsApp Link */}
       <div className="fixed bottom-8 right-8 z-50">
-        <a 
-          href="https://wa.me/918939237308?text=Hello,%20I%20am%20interested!" 
-          target="_blank" 
+        <a
+          href="https://wa.me/918939237308?text=Hello,%20I%20am%20interested!"
+          target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:bg-[#1DA851] transition-colors duration-300"
           aria-label="Message on WhatsApp"
