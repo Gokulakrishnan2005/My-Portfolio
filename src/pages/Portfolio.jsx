@@ -7,60 +7,69 @@ import { Github, Linkedin, ExternalLink } from 'lucide-react'; // eslint-disable
 import { SiLeetcode } from 'react-icons/si'; // eslint-disable-line no-unused-vars
 import { FaWhatsapp } from 'react-icons/fa'; // eslint-disable-line no-unused-vars
 // BUG FIX 1: Corrected the typo in the import path from "componants" to "components".
-import AnimatedCounter from "../componants/AnimatedCounter"; // eslint-disable-line no-unused-vars 
+import AnimatedCounter from "../components/AnimatedCounter"; // eslint-disable-line no-unused-vars 
 
-// Define project data outside the component for better performance
 const projectsData = [
   {
     id: 1,
-    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/Elm-Library-Hub.png?alt=media&token=5c149b2c-d48d-4f9f-80f9-318afd60b9be",
+    image: "/furniture project.png",
     category: "front-end sites",
-    alt: "Front-End Project",
+    alt: "Casa design Interior site",
+    title: "Casa design Interior site",
+    description: "A showcase site for interior design featuring elegant gallery previews.",
+    demoUrl: "https://the-furniture-company-pages.onrender.com",
+    githubUrl: "https://github.com/Gokulakrishnan2005/the-furniture-company"
+  },
+  {
+    id: 2,
+    image: "/library project.png",
+    category: "front-end sites",
+    alt: "Elm Library Hub for Library Management",
     title: "Elm Library Hub for Library Management",
-    description: "Application for managing library operations, including book management, user management, and borrowing system.",
+    description: "A student-led library management tool for tracking books and patrons.",
     demoUrl: "https://library-chapter-chashers.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/Library_chapter_chashers"
   },
   {
-    id: 2,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744902989147Screenshot%202025-04-17%20204518.png?alt=media&token=fb165cd3-7ea2-4fe7-bb0f-d1e0acadd19d",
-    category: "full stack sites",
-    alt: "web Developement project",
-    title: "Merit Institution Management System",
-    description: " This project is a comprehensive student management system for Merit Institution. It facilitates student registration, document management, and performance tracking, providing a streamlined digital platform for administrative tasks. ",
-    demoUrl: "https://merit-institution.onrender.com/",
-    githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
-  },
-  {
     id: 3,
-    image: "https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1745417611071Screenshot%202025-04-23%20194142.png?alt=media&token=c0b5a107-2cf2-4a47-bf8b-49d60225a3b7",
+    image: "/g as a logo.png",
     category: "front-end sites",
-    alt: "Web Template Project",
+    alt: "My Portfolio",
     title: "My Portfolio",
-    description: "It is an interactive portfolio website showcasing my work and skills",
+    description: "An interactive personal website displaying coding projects and skills.",
     demoUrl: "https://gokulakrishnan-portfolio.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/My-Portfolio"
   },
   {
     id: 4,
-    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/Screenshot%202025-06-24%20074118.png?alt=media&token=b20f1d01-4782-48f7-adbb-2b475cde357e",
+    image: "/ecommerce and xerox2u project.png",
     category: "full stack sites",
-    alt: "web development project",
+    alt: "Printing Shop with E-commerce",
     title: "Printing Shop with E-commerce",
-    description: "Xerox2U is your all-in-one platform for essential digital services, combining on-demand printing with a full-featured e-commerce storefront. It’s designed to be a blueprint for a local business's entire digital operation, in one box.",
+    description: "An e-commerce platform offering on-demand xerox printing services.",
     demoUrl: "https://xerox2u.onrender.com/",
     githubUrl: "https://github.com/Gokulakrishnan2005/studio"
   },
   {
     id: 5,
-    image: "https://firebasestorage.googleapis.com/v0/b/mern-estate-1b297.appspot.com/o/brave_screenshot_the-furniture-company.onrender.com.png?alt=media&token=386f9f82-26c6-46e8-82e9-17147af2cd4f",
+    image: "/gokul-experiements .png",
     category: "front-end sites",
-    alt: "Front-End Project",
-    title: "Casa design Interior site",
-    description: "Application for outreaching the client asked for showcase purpose, including separate section like profile, gallary, and about us.",
-    demoUrl: "https://the-furniture-company-pages.onrender.com",
-    githubUrl: "https://github.com/Gokulakrishnan2005/the-furniture-company"
+    alt: "Gokul Experiments",
+    title: "Gokul Experiments (AI Prompt Vault)",
+    description: "An interactive prompt vault showcasing advanced AI system instructions.",
+    demoUrl: "https://gokul-experiements.onrender.com/",
+    githubUrl: "https://github.com/Gokulakrishnan2005/My-Portfolio"
   },
+  {
+    id: 6,
+    image: "/merit college project to manage students and teachers.png",
+    category: "full stack sites",
+    alt: "Merit Institution Management System",
+    title: "Merit Institution Management System",
+    description: "A digital portal for student registration and administration tracking.",
+    demoUrl: "https://merit-institution.onrender.com/",
+    githubUrl: "https://github.com/Gokulakrishnan2005/Merit"
+  }
 ];
 
 // Styled components defined outside the main component function
@@ -272,14 +281,14 @@ function Portfolio() {
             animate="visible"
             variants={itemVariantsActualImage}
           >
-            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 m-4 md:m-10 relative" style={{ width: '100%', paddingTop: '100%' }}> {/* Added relative and padding for aspect ratio */}
+            <div className="bg-[#eeeeee] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 w-full max-w-[320px] md:max-w-none aspect-square my-4 mx-auto md:my-10 relative">
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-300 animate-pulse rounded-xl">
                   {/* You can add a loading spinner here if desired */}
                 </div>
               )}
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/my-first-project-6eebf.appspot.com/o/1744736152021IMG_20250215_082423-removebg-preview.png?alt=media&token=af43b5ed-2939-4f8d-8a01-e73485397d66"
+                src="/IMG_20251123_203727-EDIT.jpg"
                 alt="Gokula Krishnan profile"
                 className={`absolute inset-0 w-full h-full object-cover rounded-xl ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} // Fade in image
                 onLoad={() => setImageLoaded(true)}
@@ -410,9 +419,9 @@ function Portfolio() {
           {/* MAIN BUG FIX: The original bug was likely an inefficient nested .map() here.
               This corrected version maps ONLY over the `filteredProjects` array,
               which is efficient and clean. */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div key={activeCategory} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <motion.div key={project.id} variants={itemVariantsUp}>
+              <motion.div key={project.id} variants={itemVariantsUp} initial="hidden" animate="visible">
                 <StyledCard>
                   <img
                     src={project.image}

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // eslint-disable-line no-unused-vars
-import Header from './componants/Header.jsx'; // eslint-disable-line no-unused-vars
+import Header from './components/Header.jsx'; // eslint-disable-line no-unused-vars
 import Portfolio from './pages/Portfolio.jsx'; // eslint-disable-line no-unused-vars
 import BlogList from './pages/BlogList.jsx'; // eslint-disable-line no-unused-vars
 import BlogPostDetail from './pages/BlogPostDetail.jsx'; // eslint-disable-line no-unused-vars
